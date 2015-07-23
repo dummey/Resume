@@ -5,7 +5,7 @@ module RickyNg
     attr_accessor :work_history
 
     def pretty_print(pp)
-      pp self.instance_variables.map{|k| {k => self.instance_variable_get(k)}}
+      pp self.instance_variables.map{|k| {k.to_s.gsub('@', '') => self.instance_variable_get(k)}}
     end
   end
 
@@ -58,10 +58,10 @@ module RickyNg
   }
 
   @skills = {
-    languages: ['Ruby', 'Perl', 'Java', 'C', 'Elixir', 'Javascript']
+    languages: ['Ruby', 'Perl', 'Java', 'C', 'Elixir', 'Javascript'],
 
     #{keyword => years of experience}
-    hr_keywords: {'Android using Java' => 1, 'Ruby on Rails' => 1, 'Agile' => 4, 'CI' => 2, 'TDD' => 3, 'Motivated' => 27}
+    hr_keywords: {'Android using Java' => 1, 'Ruby on Rails' => 1, 'Agile' => 4, 'CI' => 2, 'TDD' => 3, 'Motivated' => 27},
   }
 
   @hobbies = ['Cycling', 'Triathlon', 'Backpacking', 'Photography', 'GameDev', 'Education']
