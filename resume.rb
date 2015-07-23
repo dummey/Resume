@@ -1,4 +1,4 @@
-['pp', 'date', 'json'].each {|lib| require lib}
+['pp', 'date'].each {|lib| require lib}
 
 module RickyNg
   class << self
