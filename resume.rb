@@ -21,7 +21,7 @@ module RickyNg
   @work_history = [
     {
       company: 'Launchcode (CoderGirls)',
-      time_period: {start: Date.new(2014, 1), fin: Date.today},
+      time_period: {start: Date.new(2014, 1), fin: Date::Infinity},
       job_title: 'Mentor',
       description: ['Teaching assistant for CS50x in St Louis',
                     'Help drive Launchcode CS50x and CoderGirls events.',
@@ -58,8 +58,10 @@ module RickyNg
   }
 
   @skills = {
-    languages: ['Ruby', 'Perl', 'Java', 'C', 'Elixer', 'Javascript'],
-    hr_keywords: ['Full Stack Web', 'DSL', 'Agile']
+    languages: ['Ruby', 'Perl', 'Java', 'C', 'Elixir', 'Javascript']
+
+    #{keyword => years of experience}
+    hr_keywords: {'Android using Java' => 1, 'Ruby on Rails' => 1, 'Agile' => 4, 'CI' => 2, 'TDD' => 3, 'Motivated' => 27}
   }
 
   @hobbies = ['Cycling', 'Triathlon', 'Backpacking', 'Photography', 'GameDev', 'Education']
