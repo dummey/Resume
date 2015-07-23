@@ -28,12 +28,12 @@ module RickyNg
       company: 'McDonnell Genome Institute',
       time_period: {start: Date.new(2013, 5), fin: Date.today},
       job_title: 'Business and Technology Analyst II',
-      description: ['Bulid and maintain the laboratory information managment system. (Perl Catalyst with Oracle DB)',
+      description: ['Build and maintain the laboratory information managment system. (Perl Catalyst with Oracle DB)',
                     'Interface internal data with public facing archives.',
-                    'Stabalize and optimize production code release cycle.'],
+                    'Stabilize and optimize production code release cycle.'],
     },
     {
-      company: 'Intel Corperation',
+      company: 'Intel Corporation',
       time_period: {start: Date.new(2011, 9), fin: Date.new(2013, 4)},
       job_title: 'Graphics SV Front-End Tools Engineer',
       description: ['Designed, implemented, and maintained tools that are used for validating the graphics hardware on Intel processors.',
@@ -42,8 +42,9 @@ module RickyNg
     {
       company: 'Carefusion',
       time_period: {start: Date.new(2009, 12), fin: Date.new(2010, 9)},
-      job_title: 'Android and Frontend Developer'
-      description: 'Part of the NextGen Infusion team responsible for evaluating and developing new technologies for use in future medical devices. Worked primarily on interfacing Android devices with hospital devices.',
+      job_title: 'Android and Frontend Developer',
+      description: ['Part of the NextGen Infusion team responsible for evaluating and developing new technologies for use in future medical devices.',
+                    'Worked primarily on interfacing Android devices with hospital devices.'],
     },
   ]
 
@@ -55,7 +56,7 @@ module RickyNg
 
   @skills = {
     languages: ['Ruby', 'Perl', 'Java', 'C', 'Elixer', 'Javascript'],
-    hr_keywords: ['Full Stack Web', 'DSL', '']
+    hr_keywords: ['Full Stack Web', 'DSL', 'Agile']
   }
 
   @hobbies = ['Cycling', 'Triathlon', 'Backpacking', 'Photography', 'GameDev', 'Education']
@@ -68,3 +69,5 @@ RickyNg::work_history.unshift(
     description: 'Building awesome stuff.'
   }
 )
+
+p RickyNg.instance_variables
