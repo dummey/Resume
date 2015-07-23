@@ -1,15 +1,18 @@
-['date', 'pp'].each {|lib| require lib}
+['pp', 'date', 'json'].each {|lib| require lib}
 
 module RickyNg
   class << self
     attr_accessor :work_history
+
+    def pretty_print(pp)
+      pp self.instance_variables.map{|k| {k => self.instance_variable_get(k)}}
+    end
   end
 
   @contact = {
     email: 'dummey@gmail.com',
     phone: '510-590-6889',
-    address: '5622 Delmar Blvd. Apt 609\
-              St Louis, MO 63112',
+    address: '5622 Delmar Blvd. Apt 609 | St Louis, MO 63112',
     github: 'https://github.com/dummey',
   }
 
@@ -50,7 +53,7 @@ module RickyNg
 
   @education = {
     institute: 'University of California, San Diego',
-    degree: ['Computer Science, BS', 'Coginitive Science, Minor'],
+    degree: ['Computer Science, BS', 'Cognitive Science, Minor'],
     time_period: {start: Date.new(2006, 9), fin: Date.new(2011,5)},
   }
 
@@ -64,10 +67,10 @@ end
 
 RickyNg::work_history.unshift(
   {
-    company: 'Asynchony Labs',
+    company: 'Asynchrony Labs',
     time_period: {start: Date.today, fin: Date::Infinity},
     description: 'Building awesome stuff.'
   }
 )
 
-p RickyNg.instance_variables
+pp RickyNg
